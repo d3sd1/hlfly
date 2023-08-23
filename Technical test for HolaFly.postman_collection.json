@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "c34bc320-7add-4843-98a8-e47d4d66cba9",
+		"name": "Technical test for HolaFly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3936707"
+	},
+	"item": [
+		{
+			"name": "Get api endpoints",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4567/hfswapi/test",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"hfswapi",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get people",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4567/hfswapi/get_people/1",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"hfswapi",
+						"get_people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get planet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4567/hfswapi/get_planet/1",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"hfswapi",
+						"get_planet",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get weigth random planet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4567/hfswapi/get_weight_on_random_planet",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"hfswapi",
+						"get_weight_on_random_planet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get logs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4567/hfswapi/get_logs",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"hfswapi",
+						"get_logs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -74,4 +74,6 @@ Considerations
 - swapìFunctions have been changed. 
 const genericRequest = async (url, method, logging = false, body = null) => {
 - Logging parameter was moved to the left since it is more used than body (which is specific for post/put), putting default body as null will make it easier to call and less verbose
-- 
+- Removed uppsercase in endpoints since it can cause troubles on some devices (moved to snake case)
+- I've added postman collection to properly test the app. I'd prefered to use swagger but time is time, you know
+- Used constants to manage api stuff (like max person id)
