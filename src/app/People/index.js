@@ -2,7 +2,7 @@ const WookieePeople = require('./wookieePeople');
 const CommonPeople = require('./CommonPeople');
 
 const peopleFactory = async (id, lang) => {
-    let people = null;
+    let people;
     if (lang == 'wookiee'){
         people = new WookieePeople(id);
     } else {
