@@ -102,6 +102,32 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get people Wookie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4567/hfswapi/get_people/16?format=wookiee",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"hfswapi",
+						"get_people",
+						"16"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "wookiee"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

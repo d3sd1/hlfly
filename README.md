@@ -77,3 +77,5 @@ const genericRequest = async (url, method, logging = false, body = null) => {
 - Removed uppsercase in endpoints since it can cause troubles on some devices (moved to snake case)
 - I've added postman collection to properly test the app. I'd prefered to use swagger but time is time, you know
 - Used constants to manage api stuff (like max person id)
+- Validating ids on endpoints are always a number
+- Validating wookie input as lowercase, just in case we have a cani checking our values
