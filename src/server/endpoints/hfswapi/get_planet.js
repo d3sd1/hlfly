@@ -5,7 +5,7 @@ const getPlanetEndpoint = async (req, res) => {
     const planet = await planetFactory(id)
 
     if( !planet.name ){
-        return res.status(400).json( {message:"Planeta No Existente..."} )
+        return res.status(400).json({message: "Given planet was not found by id: " + id})
     }
 
     return res.json( { name: planet.getName(), gravity: planet.getGravity() } )
