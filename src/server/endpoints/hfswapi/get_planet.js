@@ -1,6 +1,6 @@
 const {planetFactory} = require("../../../app/Planet");
 
-const getPeopleEndpoint = async (req, res, app) => {
+const getPlanetEndpoint = async (req, res) => {
     const { id } = req.params
     const planet = await planetFactory(id)
 
@@ -8,7 +8,6 @@ const getPeopleEndpoint = async (req, res, app) => {
         return res.status(400).json( {message:"Planeta No Existente..."} )
     }
 
-    const response =  { name: planet.getName(), gravity: planet.getGravity() }
-    return res.json( response )
+    return res.json( { name: planet.getName(), gravity: planet.getGravity() } )
 }
-module.exports = {getPeopleEndpoint}
+module.exports = {getPlanetEndpoint}
