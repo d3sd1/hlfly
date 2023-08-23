@@ -1,0 +1,3 @@
+const SW_API_MAX_PEOPLE_ID = 82;
+const SW_API_MAX_PLANET_ID = 60;
+module.exports = {SW_API_MAX_PEOPLE_ID, SW_API_MAX_PLANET_ID}
