@@ -1,16 +1,14 @@
-const {_isWookieeFormat} = require("../../service/format");
 const {peopleFactory} = require("../../../app/People");
-const getPeopleEndpoint = async (req, res, app) => {
+const getPeopleEndpoint = async (req, res) => {
     const {id} = req.params
 
-    const people = await peopleFactory(id, _isWookieeFormat(req) ? "wookiee" : "")
+    const people = await peopleFactory(id, req.query.format ? req.query.format.toLowerCase() : '')
     if (!people.name) {
         return res.status(400).json({message: "Given person does not exists by id: " + id})
     }
 
     return res.status(200).json({
-        name: people.getName(),
-        mass: people.getMass(),
+        name: people.getName(), mass: people.getMass(),
         height: people.getHeight(),
         homeworldName: people.getHomeworldName(),
         homeworldId: people.getHomeworlId(),
