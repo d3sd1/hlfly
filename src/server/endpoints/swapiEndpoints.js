@@ -2,6 +2,7 @@ const {testEndpoint} = require("./hfswapi/test");
 const {getPeopleEndpoint} = require("./hfswapi/get_people");
 const {getPlanetEndpoint} = require("./hfswapi/get_planet");
 const {getWeightRandomPlanetEndpoint} = require("./hfswapi/get_weight_random_planet");
+const {getLogs} = require("./hfswapi/get_logs");
 
 const applySwapiEndpoints = (server, app) => {
 
@@ -9,15 +10,14 @@ const applySwapiEndpoints = (server, app) => {
         await testEndpoint(req, res, app);
     });
 
-    server.get('/hfswapi/getPeople/:id', getPeopleEndpoint);
+    server.get('/hfswapi/get_people/:id([0-9]{1,10})', getPeopleEndpoint);
 
-    server.get('/hfswapi/getPlanet/:id', getPlanetEndpoint);
+    server.get('/hfswapi/get_planet/:id([0-9]{1,10})', getPlanetEndpoint);
 
-    server.get('/hfswapi/getWeightOnPlanetRandom', getWeightRandomPlanetEndpoint);
+    server.get('/hfswapi/get_weight_on_random_planet', getWeightRandomPlanetEndpoint);
 
-    server.get('/hfswapi/getLogs',async (req, res) => {
-        const data = await app.db.logging.findAll();
-        res.send(data);
+    server.get('/hfswapi/get_logs', async (req, res) => {
+        await getLogs(req, res, app);
     });
 
 }
