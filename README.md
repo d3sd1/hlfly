@@ -79,3 +79,5 @@ const genericRequest = async (url, method, logging = false, body = null) => {
 - Used constants to manage api stuff (like max person id)
 - Validating ids on endpoints are always a number
 - Validating wookie input as lowercase, just in case we have a cani checking our values
+- Using getter wrapping to make sure the data is properly set
+- 
