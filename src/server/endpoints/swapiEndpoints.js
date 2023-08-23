@@ -1,17 +1,9 @@
-
-const _isWookieeFormat = (req) => {
-    if(req.query.format && req.query.format == 'wookiee'){
-        return true;
-    }
-    return false;
-}
-
+const {testEndpoint} = require("./hfswapi/test");
 
 const applySwapiEndpoints = (server, app) => {
 
     server.get('/hfswapi/test', async (req, res) => {
-        const data = await app.swapiFunctions.genericRequest('https://swapi.dev/api/', 'GET', null, true);
-        res.send(data);
+        await testEndpoint(req, res, app);
     });
 
     server.get('/hfswapi/getPeople/:id', async (req, res) => {

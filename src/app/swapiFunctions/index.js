@@ -4,7 +4,7 @@ const getWeightOnPlanet = (mass, gravity) => {
     return mass * gravity;
 }
 
-const genericRequest = async (url, method, body, logging = false) => {
+const genericRequest = async (url, method, logging = false, body = null) => {
     let options = {
         method: method
     }
