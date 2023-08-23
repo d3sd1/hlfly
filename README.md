@@ -80,4 +80,12 @@ const genericRequest = async (url, method, logging = false, body = null) => {
 - Validating ids on endpoints are always a number
 - Validating wookie input as lowercase, just in case we have a cani checking our values
 - Using getter wrapping to make sure the data is properly set
-- 
+- Docker was a good choice, but had no time to implement it
+- Tests were not done since this should be e2e tests and making the context would be too heavy (time cost)
+- Graphql should be implemented along with openapi, so we have a contract to deal with frontend.
+- Swagger ui was prefered over postman, no time to implement
+- Redis would be a good choice. Now we have in-memory database which is not the best option, evfen more for scalabiltiyt
+- SQL should be accesserd better and not in memory
+- CI/CD should be implemented along with environments when deploying this
+- Making a mock from the api is needed, because their api can be down so we will have troubles
+- code hazs been refactored
